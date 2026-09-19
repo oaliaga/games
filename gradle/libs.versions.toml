@@ -20,6 +20,8 @@ dataPreferencesV = "1.1.7"
 
 retrofit = "3.0.0"
 
+coil = "2.7.0"
+
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -57,6 +59,7 @@ kotlinx-serialization-json = {group="org.jetbrains.kotlinx", name="kotlinx-seria
 retrofit = {module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
 retrofit-adapter = {module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit"}
 
+coil = {module = "io.coil-kt:coil-compose",version.ref ="coil" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
