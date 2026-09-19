@@ -1,8 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.jetbrainsKotlinSerialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
+
 }
 
 android {
@@ -62,6 +64,10 @@ dependencies {
     implementation(libs.icons)
 
     implementation(libs.dataPreferences)
+
+    //Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.adapter)
 
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))

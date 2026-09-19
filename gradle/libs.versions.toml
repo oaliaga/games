@@ -54,7 +54,6 @@ dataPreferences ={group="androidx.datastore", name="datastore-preferences", vers
 
 kotlinx-serialization-json = {group="org.jetbrains.kotlinx", name="kotlinx-serialization-json", version.ref="kotlinxSerialization"}
 
-
 retrofit = {module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
 retrofit-adapter = {module = "com.squareup.retrofit2:converter-kotlinx-serialization", version.ref = "retrofit"}
 
@@ -65,3 +64,5 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+jetbrainsKotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
