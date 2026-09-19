@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.oso.mygames.components.MainImage
 import com.oso.mygames.components.MainTopBar
+import com.oso.mygames.components.MetaWebsite
 import com.oso.mygames.viewmodel.GamesViewModel
 
 @Composable
@@ -62,7 +63,7 @@ fun ContentDescription(paddingValues: PaddingValues, viewModel: GamesViewModel) 
                 .fillMaxWidth()
                 .padding(start=20.dp, end= 5.dp)
         ){
-
+            MetaWebsite(state.website)
         }
     }
 }
