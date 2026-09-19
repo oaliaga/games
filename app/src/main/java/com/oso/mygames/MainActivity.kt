@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.oso.mygames.navigation.NavManager
 import com.oso.mygames.ui.theme.MyGamesTheme
 import com.oso.mygames.viewmodel.GamesViewModel
 import com.oso.mygames.views.HomeView
@@ -31,7 +32,7 @@ class MainActivity : ComponentActivity() {
                 Surface (modifier = Modifier.fillMaxSize(),
                     color= MaterialTheme.colorScheme.background
                 ) {
-                    HomeView(viewModel=viewModel)
+                    NavManager(viewModel=viewModel)
                 }
             }
         }
