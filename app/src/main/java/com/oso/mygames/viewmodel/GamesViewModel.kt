@@ -49,9 +49,20 @@ class GamesViewModel @Inject constructor(private val repository: GamesRepository
                     metacritic= result?.metacritic ?:111,
                     background_image= result?.background_image ?:"sin web",
                     website= result?.website ?:"",
+                    description_raw= result?.description_raw ?:"",
                 )
             }
         }
     }
 
+    fun clean(){
+        state= state.copy(
+            name= "",
+            description= "",
+            metacritic=  111,
+            background_image="",
+            website="",
+            description_raw="",
+        )
+    }
 }

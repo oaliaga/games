@@ -12,6 +12,5 @@ data class GamesModel(
 data class GameList(
     val id:Int,
     val name: String,
-    val updated: String,
     val background_image: String
 )
