@@ -50,8 +50,9 @@ fun DetailView(viewModel: GamesViewModel, navController: NavController, id: Int)
             MainTopBar(
                 title = viewModel.state.name,
                 showBackButton = true,
-                onclickBackButton = {
-                    navController.popBackStack() })
+                onclickBackButton = { navController.popBackStack()},
+                onclickAction = {}
+                )
         }
     ) { paddingValues ->
         ContentDescription(paddingValues, viewModel)

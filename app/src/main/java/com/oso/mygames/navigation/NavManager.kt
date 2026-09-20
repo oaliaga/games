@@ -11,6 +11,7 @@ import androidx.navigation.navArgument
 import com.oso.mygames.viewmodel.GamesViewModel
 import com.oso.mygames.views.DetailView
 import com.oso.mygames.views.HomeView
+import com.oso.mygames.views.SearchGameView
 
 @Composable
 fun NavManager(viewModel: GamesViewModel) {
@@ -26,6 +27,9 @@ fun NavManager(viewModel: GamesViewModel) {
         ) {
             val id = it.arguments?.getInt("id") ?: 0
             DetailView(viewModel, navController, id)
+        }
+        composable(route = "SearchGameView") {
+            SearchGameView(viewModel, navController)
         }
     }
 }

@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -42,7 +43,12 @@ import com.oso.mygames.util.Constants
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainTopBar(title:String, showBackButton:Boolean= false, onclickBackButton :() -> Unit){
+fun MainTopBar(
+    title:String,
+    showBackButton:Boolean= false,
+    onclickBackButton :() -> Unit,
+    onclickAction :() -> Unit,
+){
 
     TopAppBar(
         title={
@@ -62,6 +68,19 @@ fun MainTopBar(title:String, showBackButton:Boolean= false, onclickBackButton :(
                     Icon(
                         imageVector = Icons.Default.ArrowBack,
                         contentDescription = "icon back",
+                        tint = Color.White
+                    )
+                }
+            }
+        },
+        actions ={
+            if(!showBackButton){
+                IconButton (onClick = {
+                    onclickAction()
+                }) {
+                    Icon(
+                        imageVector = Icons.Default.Search,
+                        contentDescription = "icon search",
                         tint = Color.White
                     )
                 }

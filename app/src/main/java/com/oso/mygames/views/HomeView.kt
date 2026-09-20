@@ -28,9 +28,10 @@ fun HomeView(viewModel: GamesViewModel, navController: NavController){
 
     Scaffold (
         topBar = {
-            MainTopBar(title = "Api Games"){
-
-            }
+            MainTopBar(title = "Api Games",
+                showBackButton = false,
+                onclickBackButton = {},
+                onclickAction = {navController.navigate("SearchGameView")})
         }
     ) {padding->
         ContentHomeView(viewModel,padding,navController)
